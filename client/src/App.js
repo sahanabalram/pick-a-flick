@@ -14,14 +14,14 @@ class App extends Component {
         <LandingContainer />
          <SideNavbar />
          <Login/>
-//         // <Register/> 
-//       // <SideNavbar />
+        <Register/> 
+        <SideNavbar />
         <MuiThemeProvider>
           <CardExampleExpandable />
         </MuiThemeProvider>
         
      </div>
-//     )
+    )
 // import Login from './components/Login';
 // import NavbarContainer from './components/Navbar';
 // import Register from './components/Register';
@@ -37,7 +37,7 @@ class App extends Component {
 //         // <Register/> 
 //       // <SideNavbar />
 //     );
-//   }
-// }
+  }
+}
 
-// export default App;
+export default App;
