@@ -14,12 +14,11 @@ class App extends Component {
         <LandingContainer />
          <SideNavbar />
          <Login/>
-        <Register/> 
+        <Register/>
         <SideNavbar />
         <MuiThemeProvider>
-          <CardExampleExpandable />
-        </MuiThemeProvider>
-        
+        <CardExampleExpandable />
+        </MuiThemeProvider>]
      </div>
     )
 // import Login from './components/Login';
@@ -29,12 +28,12 @@ class App extends Component {
 
 // class App extends Component {
 //   render() {
-//     return(    
+//     return(
 //       <div>
-//       <LandingContainer/>       
-//       </div>    
+//       <LandingContainer/>
+//       </div>
 //       // <Login/>
-//         // <Register/> 
+//         // <Register/>
 //       // <SideNavbar />
 //     );
   }

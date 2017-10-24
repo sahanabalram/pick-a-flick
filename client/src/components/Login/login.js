@@ -16,7 +16,7 @@ class Login extends Component {
                 <Col s={12} m={6} l={12}>
                 <Input s={6} label="Password" validate><Icon>lock</Icon></Input>
                 </Col>
-            
+
             </Row>
                 <Button id="login-button" waves='light'><i class="fa fa-sign-in">Login</i></Button>
 
@@ -25,7 +25,7 @@ class Login extends Component {
         </div>
         );
     }
-    
+
 }
 
 export default Login;
