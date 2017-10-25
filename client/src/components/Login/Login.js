@@ -1,31 +1,50 @@
-import React, { Component } from 'react';
-import {Button,Icon,Form,Row,Input,Col} from 'react-materialize';
-import './Login.css';
+import React, { Component } from 'react'
+import { login, resetPassword } from '../../helpers/auth'
 
-class Login extends Component {
-    render() {
-        return(
-        <div className="container-fluid">
-            <div className="login-container">
-            <Row>
-                <Col  s={12} m={6} l={12}>
-                <Input s={6} label="Username" validate><Icon>account_box</Icon></Input>
-                </Col>
-            </Row>
-                <Row>
-                <Col s={12} m={6} l={12}>
-                <Input s={6} label="Password" validate><Icon>lock</Icon></Input>
-                </Col>
-            
-            </Row>
-                <Button id="login-button" waves='light'><i class="fa fa-sign-in">Login</i></Button>
-
-                <h6><a href="#">Register Now!</a></h6>
-            </div>
-        </div>
-        );
-    }
-    
+function setErrorMsg(error) {
+  return {
+    loginMessage: error
+  }
 }
 
-export default Login;
+export default class Login extends Component {
+  state = { loginMessage: null }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    login(this.email.value, this.pw.value)
+      .catch((error) => {
+          this.setState(setErrorMsg('Invalid username/password.'))
+        })
+  }
+  resetPassword = () => {
+    resetPassword(this.email.value)
+      .then(() => this.setState(setErrorMsg(`Password reset email sent to ${this.email.value}.`)))
+      .catch((error) => this.setState(setErrorMsg(`Email address not found.`)))
+  }
+  render () {
+    return (
+      <div className="col-sm-6 col-sm-offset-3">
+        <h1> Login </h1>
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label>Email</label>
+            <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input type="password" className="form-control" placeholder="Password" ref={(pw) => this.pw = pw} />
+          </div>
+          {
+            this.state.loginMessage &&
+            <div className="alert alert-danger" role="alert">
+              <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span className="sr-only">Error:</span>
+              &nbsp;{this.state.loginMessage} <a href="#" onClick={this.resetPassword} className="alert-link">Forgot Password?</a>
+            </div>
+          }
+          <button type="submit" className="btn btn-primary">Login</button>
+        </form>
+      </div>
+    )
+  }
+}
