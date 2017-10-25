@@ -1,25 +1,24 @@
 // Include React as a dependency
 import React, { Component } from 'react'
-
 // Include our helpers for API calls
 import MovieAPI from "../../utils/MovieAPI";
+import GenreButtonContainer from "../GenreButton/GenreButton";
 // import MovieModal from "./MovieModal.js"
-const genreID = 10751;
+
 // Results Component Declaration
 class GenreCards extends Component {
+  
   // Here we will save states for the contents we save
   state = {
     movies: [],
     movie: {},
-    show: false
+    show: false,
   }
 
-  getMoviesbyGenre = () => {
-    MovieAPI.listOfGenreIds().then((res)=>{
-      console.log(res.data.genres);
-    });
 
-    MovieAPI.movieSearchByGenreId(genreID, (data)=>{
+  getMoviesbyGenre = () => {
+
+    MovieAPI.movieSearchByGenreId(this.props.genre, (data)=>{
       console.log(data);
       if (data.results && data.results.length > 0 ) {
         this.setState({movies: data.results});
@@ -28,22 +27,16 @@ class GenreCards extends Component {
 
   }
 
- componentDidMount(genreID) {
+ componentDidUpdate() {
+    console.log("GENREBUTTONSTUF=====", GenreButtonContainer.state)
     this.getMoviesbyGenre()
   }
-
 
   _createCardsUI(){
 
   // Declare Movie Props Return
   var movies = this.state.movies || {}
 
-  // ??? Duplicate functionality of above?
-  // let movies = this.state.movies.map((value, index, array) => {
-  //   return (
-  //         <li onClick={this.onClick.bind(this, value)} key={value.id} href={"#/movies/" + value.id}>{value.title}</li>
-  //   )
-  // });
 
     return movies.map( movie => (
         <div className="movie-modal">
@@ -77,7 +70,7 @@ class GenreCards extends Component {
       )
     }
 
-      render () {
+  render () {
         return (
           <div>
               {this._createCardsUI()}
@@ -85,10 +78,7 @@ class GenreCards extends Component {
        )
   }
 
-
-
 }
-
 
 // Export the module back to the route
 export default GenreCards;
