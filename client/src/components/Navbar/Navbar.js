@@ -6,6 +6,7 @@ class NavbarContainer extends Component {
         return (
             <div>
             <Navbar brand="Flick-Pick" right>
+            <NavItem a href="#About">About</NavItem>
             <NavItem href='get-started.html'>Login</NavItem>
             <NavItem href='components.html'>Register</NavItem>
             </Navbar>

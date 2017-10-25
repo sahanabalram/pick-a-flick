@@ -6,12 +6,17 @@ import Login from './components/Login';
 import NavbarContainer from './components/Navbar';
 import Register from './components/Register';
 import LandingContainer from './components/Landing';
+import ReactDOM from 'react-dom';
+import AboutContainer from './components/About';
+import FooterContainer from './components/Footer';
 
 class App extends Component {
   render() {
     return(
       <div>
-        <LandingContainer />
+        <NavbarContainer />
+        <AboutContainer />
+    <LandingContainer />
          <SideNavbar />
          <Login/>
         <Register/> 
@@ -19,24 +24,10 @@ class App extends Component {
         <MuiThemeProvider>
           <CardExampleExpandable />
         </MuiThemeProvider>
-        
+        <FooterContainer />
+
      </div>
     )
-// import Login from './components/Login';
-// import NavbarContainer from './components/Navbar';
-// import Register from './components/Register';
-// import LandingContainer from './components/Landing';
-
-// class App extends Component {
-//   render() {
-//     return(    
-//       <div>
-//       <LandingContainer/>       
-//       </div>    
-//       // <Login/>
-//         // <Register/> 
-//       // <SideNavbar />
-//     );
   }
 }
 
