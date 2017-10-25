@@ -6,6 +6,7 @@ import Login from './components/Login';
 import NavbarContainer from './components/Navbar';
 import Register from './components/Register';
 import LandingContainer from './components/Landing';
+import GenreCards from './components/Search/GenreCards'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <MuiThemeProvider>
           <CardExampleExpandable />
         </MuiThemeProvider>
+        <GenreCards />
         
      </div>
     )

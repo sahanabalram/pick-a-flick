@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 // Include our helpers for API calls
 import MovieAPI from "../../utils/MovieAPI";
 // import MovieModal from "./MovieModal.js"
-
+const genreID = 10751;
 // Results Component Declaration
 class GenreCards extends Component {
   // Here we will save states for the contents we save
@@ -19,7 +19,7 @@ class GenreCards extends Component {
       console.log(res.data.genres);
     });
 
-    MovieAPI.movieSearchByGenreId(35, (data)=>{
+    MovieAPI.movieSearchByGenreId(genreID, (data)=>{
       console.log(data);
       if (data.results && data.results.length > 0 ) {
         this.setState({movies: data.results});
@@ -28,7 +28,7 @@ class GenreCards extends Component {
 
   }
 
- componentDidMount() {
+ componentDidMount(genreID) {
     this.getMoviesbyGenre()
   }
 
