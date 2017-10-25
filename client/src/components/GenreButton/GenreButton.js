@@ -22,11 +22,11 @@ class GenreButtonContainer extends Component {
             <div className='container'>
                 <Row>
                     <Col s={12} m={4} l={4}>
-                        <iframes
+                        <iframe
                             id="chatterbot" title='movie-bot'
                             width="350"
                             height="430"
-                            src="https://console.dialogflow.com/api-client/demo/embedded/13205648-e9a8-4cb9-b8f8-a73fceca689e"></iframes>
+                            src="https://console.dialogflow.com/api-client/demo/embedded/13205648-e9a8-4cb9-b8f8-a73fceca689e"></iframe>
                     </Col>
                     <Col s={12} m={8} l={8}>
                         <h1>Movie Suggestion</h1>
