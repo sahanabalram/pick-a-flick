@@ -1,14 +1,34 @@
 import React, { Component } from 'react';
 import {Navbar, NavItem,Icon} from 'react-materialize';
+import { Link } from 'react-router-dom';
 
 class NavbarContainer extends Component {
     render() {
         return (
             <div>
             <Navbar brand="Flick-Pick" right>
-            <NavItem a href="#About">About</NavItem>
-            <NavItem href='get-started.html'>Login</NavItem>
-            <NavItem href='components.html'>Register</NavItem>
+                <ul id='navbar-main'>
+                    <li>
+                <Link to="/">
+                    <NavItem>Home</NavItem>
+                </Link>
+                    </li>
+                    <li>
+                <Link to="/About">
+                    <NavItem>About</NavItem>
+                </Link>
+                    </li>
+                    <li>
+                <Link to="/Login">
+                    <NavItem>Login</NavItem>
+                </Link>
+                    </li>
+                    <li>
+                <Link to="/Register">
+                    <NavItem>Register</NavItem>
+                </Link>
+                    </li>
+                </ul>
             </Navbar>
             </div>
         )
