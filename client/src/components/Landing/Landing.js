@@ -4,8 +4,8 @@ import './Landing.css';
 class LandingContainer extends Component {
     render() {
         return (
-            <div className="container-fluid">
-                <Row>
+            <div id="img-container" className="container">
+                <Row id="img-container">
                     <Col s={12} m={4} l={4}>
                         <img
                             id='main-poster'
