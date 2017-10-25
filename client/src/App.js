@@ -1,17 +1,66 @@
-import React, { Component } from 'react';
-import CardExampleExpandable from './components/Cards';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import React, {Component} from 'react';
+import {Route, BrowserRouter, Link, Redirect, Switch} from 'react-router-dom';
+import {Navbar, NavItem, Icon} from 'react-materialize';
 import Login from './components/Login';
-import NavbarContainer from './components/Navbar';
 import Register from './components/Register';
+import Dashboard from './components/Protected';
+import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
-import ReactDOM from 'react-dom';
-import AboutContainer from './components/About';
-import FooterContainer from './components/Footer';
-import { Route, Switch, Link, BrowserRouter as Router } from 'react-router-dom';
-import ChatBotContainer from './components/ChatBot';
+import {logout} from './helpers/auth';
+import {firebaseAuth} from './config/constants';
 
-class App extends Component {
+function PrivateRoute({
+  component: Component,
+  authed,
+  ...rest
+}) {
+  return (
+    <Route
+      {...rest}
+      render={(props) => authed === true
+      ? <Component {...props}/>
+      : <Redirect
+        to={{
+        pathname: '/login',
+        state: {
+          from: props.location
+        }
+      }}/>}/>
+  )
+}
+
+function PublicRoute({
+  component: Component,
+  authed,
+  ...rest
+}) {
+  return (
+    <Route
+      {...rest}
+      render={(props) => authed === false
+      ? <Component {...props}/>
+      : <Redirect to='/dashboard'/>}/>
+  )
+}
+
+export default class App extends Component {
+  state = {
+    authed: false,
+    loading: true
+  }
+  componentDidMount() {
+    this.removeListener = firebaseAuth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({authed: true, loading: false})
+      } else {
+        this.setState({authed: false, loading: false})
+      }
+    })
+  }
+  componentWillUnmount() {
+    this.removeListener()
+  }
+
   render() {
     return(
       <div>
@@ -25,20 +74,7 @@ class App extends Component {
         <Route exact={true} path='/Main' component={CardExampleExpandable}/>
         {/* <Route exact={true} path='/Contact' component={ContactContainer}/> */}
         <FooterContainer />
-        {/* <NavbarContainer />
-        <AboutContainer />
-    <LandingContainer />
-         <Login/>
-        <Register/> 
-        <SideNavbar />
-        <MuiThemeProvider>
-          <CardExampleExpandable />
-        </MuiThemeProvider>
-        <FooterContainer /> */}
-
-      </div>
+        </div>
     )
   }
 }
-
-export default App;
