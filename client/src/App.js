@@ -8,6 +8,8 @@ import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
 import {logout} from './helpers/auth';
 import {firebaseAuth} from './config/constants';
+import AboutContainer from './components/About';
+import FooterContainer from './components/Footer';
 
 function PrivateRoute({
   component: Component,
@@ -71,7 +73,6 @@ export default class App extends Component {
         <Route exact={true} path='/Register' component={Register}/>
         {/* <Route eact={true} path='/Contact' component={Contact}/> */}
         {/* <Route exact={true} path='/Main' component={ChatbotContainer}/> */}
-        <Route exact={true} path='/Main' component={CardExampleExpandable}/>
         {/* <Route exact={true} path='/Contact' component={ContactContainer}/> */}
         <FooterContainer />
         </div>
