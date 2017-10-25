@@ -1,13 +1,27 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {Row, Col} from 'react-materialize';
+import './Landing.css';
 class LandingContainer extends Component {
     render() {
         return (
             <div className="container-fluid">
-                   {/* <img src="http://www.zulkarnine.com/wp-content/uploads/2013/12/collage-copy.jpg" alt="background-image" /> */}
+                <Row>
+                    <Col s={12} m={4} l={4}>
+                        <img
+                            id='main-poster'
+                            src='https://pix-media.priceonomics-media.com/blog/892/posters.jpg'
+                            alt='main-poster'/>
+                    </Col>
+                    <Col s={12} m={8} l={8}>
+                        <p>
+                            Tierd of scrolling through movies and wasting hours of time</p>
+                    </Col>
+                </Row>
+
             </div>
         )
     }
-    
+
 }
 
 export default LandingContainer;
