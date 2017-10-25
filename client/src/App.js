@@ -39,7 +39,7 @@ function PublicRoute({
       {...rest}
       render={(props) => authed === false
       ? <Component {...props}/>
-      : <Redirect to='/dashboard'/>}/>
+      : <Redirect to='/main'/>}/>
   )
 }
 
@@ -85,9 +85,8 @@ export default class App extends Component {
                     <NavItem>Dashboard</NavItem>
                   </Link>
                 </li>
-              </ul>
-
-            </Navbar>
+                <li>
+                  <Link to='/'>
             {this.state.authed
               ? <button
                   style={{
@@ -99,6 +98,11 @@ export default class App extends Component {
                 }}
                   className="navbar-brand">Logout</button>
               : <span></span>}
+              </Link>
+                  </li>
+              </ul>
+
+            </Navbar>
 
             <div className="container">
               <div className="row">
@@ -108,7 +112,7 @@ export default class App extends Component {
                   <PublicRoute authed={this.state.authed} path='/register' component={Register}/>
                   <PrivateRoute
                     authed={this.state.authed}
-                    path='/dashboard'
+                    path='/main'
                     component={Dashboard}/>
                   <Route render={() => <h3>No Match</h3>}/>
                 </Switch>

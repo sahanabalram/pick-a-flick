@@ -18,7 +18,10 @@ class LandingContainer extends Component {
                     </Col>
                 </Row>
 
+            <div className="container-fluid">
+                   <p>home page</p>
             </div>
+        </div>
         )
     }
 
