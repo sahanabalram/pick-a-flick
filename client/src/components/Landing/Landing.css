@@ -1,10 +1,10 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: url(http://www.zulkarnine.com/wp-content/uploads/2013/12/collage-copy.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+#main-poster {
+  margin-top: 60px;
+  margin-left:0px;
+  margin-right: 30px;
+  padding-left:0;
+}
+
+#img-container{
+  width:85%;
+}
