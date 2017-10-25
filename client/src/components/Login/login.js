@@ -6,7 +6,6 @@ function setErrorMsg(error) {
     loginMessage: error
   }
 }
-
 export default class Login extends Component {
   state = { loginMessage: null }
   handleSubmit = (e) => {
