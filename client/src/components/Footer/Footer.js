@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Footer } from 'react-materialize';
 import ReactDOM from 'react-dom';
-
 
 class FooterContainer extends Component {
     render() {

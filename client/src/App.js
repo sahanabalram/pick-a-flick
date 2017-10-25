@@ -25,8 +25,7 @@ class App extends Component {
           <CardExampleExpandable />
         </MuiThemeProvider>
         <FooterContainer />
-
-     </div>
+      </div>
     )
   }
 }
