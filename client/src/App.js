@@ -8,6 +8,8 @@ import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
 import {logout} from './helpers/auth';
 import {firebaseAuth} from './config/constants';
+import AboutContainer from './components/About';
+import Footer from './components/Footer';
 
 function PrivateRoute({
   component: Component,
@@ -103,11 +105,11 @@ export default class App extends Component {
               </ul>
 
             </Navbar>
-
             <div className="container">
               <div className="row">
                 <Switch>
                   <Route path='/' exact component={LandingContainer}/>
+                  <Route path='/' exact component={AboutContainer}/>
                   <PublicRoute authed={this.state.authed} path='/login' component={Login}/>
                   <PublicRoute authed={this.state.authed} path='/register' component={Register}/>
                   <PrivateRoute
@@ -118,6 +120,7 @@ export default class App extends Component {
                 </Switch>
               </div>
             </div>
+            <Footer />
           </div>
         </BrowserRouter>
       );
