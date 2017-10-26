@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "pappy123",
     "database": "test_mysql_react",
     "host": "127.0.0.1",
     "dialect": "mysql"
