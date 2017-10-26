@@ -7,8 +7,9 @@ import GenreCards from '../Search/GenreCards';
 class GenreButtonContainer extends Component {
 
     state = {
-        value : ""
-    }
+        value : "",
+        movies: []
+    };
 
 
     getMoviesbyGenre = (newGenre) => {
@@ -56,7 +57,7 @@ class GenreButtonContainer extends Component {
                         </ul>
                     </Col>
                 </Row>
-                <GenreCards genre={this.state.value}></GenreCards>
+                <GenreCards movies={this.state.movies}></GenreCards>
             </div>
         )
     }

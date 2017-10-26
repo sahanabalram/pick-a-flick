@@ -10,21 +10,16 @@ class GenreCards extends Component {
 
   // Here we will save states for the contents we save
   state = {
-    movies: [],
-    movie: {},
-    show: false,
+    show: false
   }
-
-
 
 
   _createCardsUI(){
 
   // Declare Movie Props Return
-  var movies = this.state.movies || {}
+  var movies = this.props.movies || [];
 
-
-    return movies.map( movie => (
+    return movies.map(movie => (
         <div className="movie-modal">
           <div
             className='small'
