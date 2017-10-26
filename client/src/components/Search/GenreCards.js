@@ -17,7 +17,6 @@ class GenreCards extends Component {
 
 
   getMoviesbyGenre = () => {
-
     MovieAPI.movieSearchByGenreId(this.props.genre, (data)=>{
       console.log(data);
       if (data.results && data.results.length > 0 ) {
@@ -27,7 +26,7 @@ class GenreCards extends Component {
 
   }
 
- componentDidUpdate() {
+ componentWillUpdate() {
     console.log("GENREBUTTONSTUF=====", GenreButtonContainer.state)
     this.getMoviesbyGenre()
   }

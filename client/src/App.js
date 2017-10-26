@@ -1,3 +1,15 @@
+import React, {Component} from 'react';
+import {Route, BrowserRouter, Link, Redirect, Switch} from 'react-router-dom';
+import {Navbar, NavItem, Icon} from 'react-materialize';
+import Login from './components/Login';
+import Register from './components/Register';
+import Dashboard from './components/Protected';
+import NavbarContainer from './components/Navbar';
+import LandingContainer from './components/Landing';
+import {logout} from './helpers/auth';
+import {firebaseAuth} from './config/constants';
+
+
 function PrivateRoute({
   component: Component,
   authed,
