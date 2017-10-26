@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Col, Row} from 'react-materialize';
 import './GenreButton.css';
-
+import MovieAPI from "../../utils/MovieAPI";
 import GenreCards from '../Search/GenreCards';
 
 class GenreButtonContainer extends Component {
@@ -10,14 +10,30 @@ class GenreButtonContainer extends Component {
         value : ""
     }
 
+
+    getMoviesbyGenre = (newGenre) => {
+      MovieAPI.movieSearchByGenreId(newGenre, (data)=>{
+        console.log(data);
+        if (data.results && data.results.length > 0 ) {
+          this.setState({movies: data.results});
+        }
+      });
+    }
+
+   componentWillReceiveProps(newGenre) {
+    //  let newGenre = this.state.value;
+     console.log("NEW STATE===", newGenre)
+     this.getMoviesbyGenre(newGenre);
+    }
+
     handleEvent = (e) => {
-        this.setState({value: e.target.value});
-        // console.log(genreID);
+      this.setState({value: e.target.value});
+      this.componentWillReceiveProps(e.target.value);
       }
 
     render() {
-        let genreID = this.state.value;
-        console.log("GENRE BUTTON====", genreID)
+        // let genreID = this.state.value;
+        // console.log("GENRE BUTTON====", newGenre)
         return (
             <div className='container'>
                 <Row>

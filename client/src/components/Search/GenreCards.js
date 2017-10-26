@@ -7,7 +7,7 @@ import GenreButtonContainer from "../GenreButton/GenreButton";
 
 // Results Component Declaration
 class GenreCards extends Component {
-  
+
   // Here we will save states for the contents we save
   state = {
     movies: [],
@@ -16,20 +16,7 @@ class GenreCards extends Component {
   }
 
 
-  getMoviesbyGenre = () => {
-    MovieAPI.movieSearchByGenreId(this.props.genre, (data)=>{
-      console.log(data);
-      if (data.results && data.results.length > 0 ) {
-        this.setState({movies: data.results});
-      }
-    });
 
-  }
-
- componentWillUpdate() {
-    console.log("GENREBUTTONSTUF=====", GenreButtonContainer.state)
-    this.getMoviesbyGenre()
-  }
 
   _createCardsUI(){
 
