@@ -2549,7 +2549,11 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
+<<<<<<< HEAD
 fbjs@^0.8.1, fbjs@^0.8.16, fbjs@^0.8.9:
+=======
+fbjs@^0.8.16, fbjs@^0.8.9:
+>>>>>>> f2f15236c2aba318c7eec55bc785d0e66ad72685
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -5102,7 +5106,11 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+<<<<<<< HEAD
 prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.6.0:
+=======
+prop-types@^15.5.10, prop-types@^15.6.0:
+>>>>>>> f2f15236c2aba318c7eec55bc785d0e66ad72685
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -5267,6 +5275,7 @@ react-error-overlay@^2.0.2:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
+<<<<<<< HEAD
 react-event-listener@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.5.1.tgz#ba36076e47bc37c5a67ff5ccd4a9ff0f15621040"
@@ -5276,6 +5285,8 @@ react-event-listener@^0.5.1:
     prop-types "^15.6.0"
     warning "^3.0.0"
 
+=======
+>>>>>>> f2f15236c2aba318c7eec55bc785d0e66ad72685
 react-materialize@^1.0.16:
   version "1.0.16"
   resolved "https://registry.yarnpkg.com/react-materialize/-/react-materialize-1.0.16.tgz#9bcc91b342801926d5f73ba228ce066bc734111f"
