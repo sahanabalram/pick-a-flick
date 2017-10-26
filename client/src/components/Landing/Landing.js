@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'react-materialize';
+import React, {Component} from 'react';
+import {Row, Col,Button} from 'react-materialize';
 import './Landing.css';
 class LandingContainer extends Component {
     render() {
         return (
-
-            <div className="valign-wrapper" id="welcome">
+            <div id="welcome" className="valign-wrapper">
                 <Row>
-                    <Col s={12}>
-                        <h2 className='left-align'>Can't decide what to watch?</h2><br />
-                        <h4>Let BotFlick Pick-A-Flick for you!</h4>
-                    </Col>
+                <Col s={12}>
+                    <h2 className='left-align'>Can't decide what to watch</h2>
+                    <h4>Let Botflick Pick-A-Flick for you!</h4>
+                    <Button  id='main-register'waves='light' className='orange'>Register</Button>
+                </Col>
                 </Row>
             </div>
-
         )
     }
 

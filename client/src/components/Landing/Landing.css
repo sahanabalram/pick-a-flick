@@ -1,24 +1,11 @@
-#main-poster {
-  margin-top: 60px;
-  margin-left:0px;
-  margin-right: 30px;
-  padding-left:0;
-}
-
-#img-container{
-  width:85%;
-}
-
 body {
   background-image: url('landing-bg.jpg');
   background-size: cover;
-  font-family: 'Anton', sans-serif;
-  
-  
 }
-
 #welcome {
   margin-top: 200px;
-  color: black;
+}
 
+#main-register {
+  margin-top: 10px;
 }
