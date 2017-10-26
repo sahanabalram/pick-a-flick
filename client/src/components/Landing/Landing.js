@@ -4,24 +4,14 @@ import './Landing.css';
 class LandingContainer extends Component {
     render() {
         return (
-            <div id="img-container" className="container">
-                <Row id="img-container">
-                    <Col s={12} m={4} l={4}>
-                        <img
-                            id='main-poster'
-                            src='https://pix-media.priceonomics-media.com/blog/892/posters.jpg'
-                            alt='main-poster'/>
-                    </Col>
-                    <Col s={12} m={8} l={8}>
-                        <p>
-                            Tierd of scrolling through movies and wasting hours of time</p>
-                    </Col>
+            <div id="welcome" className="valign-wrapper">
+                <Row>
+                <Col s={12}>
+                    <h2 className='left-align'>Can't decide what to watch</h2>
+                    <h4>Let Botflick Pick-A-Flick for you!</h4>
+                </Col>
                 </Row>
-
-            <div className="container-fluid">
-                   <p>home page</p>
             </div>
-        </div>
         )
     }
 
