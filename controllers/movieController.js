@@ -3,12 +3,11 @@
 // =============================================================
 var db = require("./../models");
 
-
 // Routes
 // =============================================================
 
 module.exports = {
-  // Get all saved movies
+  // Get all movies
   findAll: function(req, res) {
     db.Movie.findAll({}).then(function(data){
       res.json(data);
@@ -16,9 +15,9 @@ module.exports = {
 },
 
   create: function(req, res) {
-    // saving new movie as favorite
-
+    //save a new movie to the database
     db.Movie.create({
+      user_uid: req.body._uid,
       movieTitle: req.body.movieTitle,
       releaseYear: req.body.releaseYear,
       genre: req.body.genre,
