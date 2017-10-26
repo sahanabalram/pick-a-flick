@@ -3,7 +3,7 @@ import "./ChatBot.css"
 class ChatbotContainer extends Component {
     render() {
         return (
-            <iframe id="chatterbot"
+            <iframe id="chatterbot" title="chattybot"
             width="350"
             height="430"
             src="https://console.dialogflow.com/api-client/demo/embedded/13205648-e9a8-4cb9-b8f8-a73fceca689e">
