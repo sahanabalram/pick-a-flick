@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Button, Col, Row} from 'react-materialize';
-import './GenreButton.css';
 import MovieAPI from "../../utils/MovieAPI";
-import GenreCards from '../Search/GenreCards';
+import GenreCards from '../Cards/GenreCards';
+import '../../components/Landing/Landing.css';
+import './GenreButton.css';
 
 class GenreButtonContainer extends Component {
 
@@ -22,7 +23,6 @@ class GenreButtonContainer extends Component {
     }
 
    componentWillReceiveProps(newGenre) {
-    //  let newGenre = this.state.value;
      console.log("NEW STATE===", newGenre)
      this.getMoviesbyGenre(newGenre);
     }
@@ -38,14 +38,7 @@ class GenreButtonContainer extends Component {
         return (
             <div className='container'>
                 <Row>
-                    <Col s={12} m={4} l={4}>
-                        <iframe
-                            id="chatterbot" title='movie-bot'
-                            width="350"
-                            height="430"
-                            src="https://console.dialogflow.com/api-client/demo/embedded/13205648-e9a8-4cb9-b8f8-a73fceca689e"></iframe>
-                    </Col>
-                    <Col s={12} m={8} l={8}>
+                    <Col s={6}>
                         <h1>Movie Suggestion</h1>
                         <ul>
                         <li><Button onClick={this.handleEvent} value="28" waves='light'>Action</Button></li>

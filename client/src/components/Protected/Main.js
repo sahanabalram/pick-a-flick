@@ -1,15 +1,40 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
+import ChatBotContainer from '../ChatBot';
+import {Button, Row, Col} from 'react-materialize';
 import GenreButtonContainer from '../../components/GenreButton';
-import GenreCards from '../../components/Search/GenreCards'
-
+import GenreCards from '../../components/Cards/GenreCards';
+import './Main.css';
+import CardExampleExpandable from '../../components/Cards/Cards';
 
 class Dashboard extends Component {
     render() {
-        return(
+        return (
             <div>
-                Sign in to view the cards
-                <GenreButtonContainer />
+                <Row>
+                    <Col s={6}>
+                    <ChatBotContainer/>
+                        {/* <Button className='movie-button' waves='light' className='orange'>Drama</Button>
+                        <Button className='movie-button' waves='light' className='orange'>Action</Button>
+                        <Button className='movie-button' waves='light' className='orange'>Science Fiction</Button>
+                        <Button className='movie-button' waves='light' className='orange'>Family</Button>
+                        <Button className='movie-button' waves='light' className='orange'>Romantic</Button> */}
+                    </Col>
+                    <GenreButtonContainer />
+                </Row>
+
+                <div>
+                    
+                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
+                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
+                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
+                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
+                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
+                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
+                   
+                </div>
+
             </div>
+
         )
     }
     
