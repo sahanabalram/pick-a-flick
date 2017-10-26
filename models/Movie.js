@@ -1,6 +1,5 @@
 module.exports  = function(sequelize, DataTypes) {
-
-  const Movie = sequelize.define("Movie", {
+  var Movie = sequelize.define("Movie", {
     _uid: {
       type:DataTypes.STRING
     },
