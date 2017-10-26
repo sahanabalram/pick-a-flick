@@ -3,6 +3,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
 const logger = require("morgan");
+const db = require("./models");
+const routes = require("./routes");
 
 // grabbing our movie model
 const db = require("./models");
