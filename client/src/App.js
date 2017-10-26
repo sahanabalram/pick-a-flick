@@ -9,6 +9,7 @@ import LandingContainer from './components/Landing';
 import {logout} from './helpers/auth';
 import {firebaseAuth} from './config/constants';
 
+
 function PrivateRoute({
   component: Component,
   authed,

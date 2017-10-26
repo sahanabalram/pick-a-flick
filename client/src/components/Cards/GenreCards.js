@@ -1,62 +1,35 @@
 // Include React as a dependency
 import React, { Component } from 'react'
-
 // Include our helpers for API calls
 import MovieAPI from "../../utils/MovieAPI";
-// import MovieModal from "./MovieModal.js"
+import GenreButtonContainer from "../GenreButton/GenreButton";
 
 // Results Component Declaration
 class GenreCards extends Component {
+
   // Here we will save states for the contents we save
   state = {
-    movies: [],
-    movie: {},
     show: false
-  }
-
-  getMoviesbyGenre = () => {
-    MovieAPI.listOfGenreIds().then((res)=>{
-      console.log(res.data.genres);
-    });
-
-    MovieAPI.movieSearchByGenreId(35, (data)=>{
-      console.log(data);
-      if (data.results && data.results.length > 0 ) {
-        this.setState({movies: data.results});
-      }
-    });
-
-  }
-
- componentDidMount() {
-    this.getMoviesbyGenre()
   }
 
 
   _createCardsUI(){
 
   // Declare Movie Props Return
-  var movies = this.state.movies || {}
+  var movies = this.props.movies || [];
 
-  // ??? Duplicate functionality of above?
-  // let movies = this.state.movies.map((value, index, array) => {
-  //   return (
-  //         <li onClick={this.onClick.bind(this, value)} key={value.id} href={"#/movies/" + value.id}>{value.title}</li>
-  //   )
-  // });
-
-    return movies.map( movie => (
+    return movies.map(movie => (
         <div className="movie-modal">
           <div
             className='small'
             aria-labelledby="movie-modal-title">
 
-            <div class="card-header">
+            <div className="card-header">
               <h3 id="movie-modal-title">{movie.title}</h3>
               <small><b>Rating: </b>{movie.vote_average}/10 ({movie.vote_count} votes)</small>
               <p><b>Release Date:</b> {movie.release_date}</p>
             </div>
-            <div class="card-body">
+            <div className="card-body">
               <div className="center-block">
                 <a href={"http://image.tmdb.org/t/p/w500"+ movie.poster_path}
                    data-lightbox={movie.title + " poster"}
@@ -77,7 +50,7 @@ class GenreCards extends Component {
       )
     }
 
-      render () {
+  render () {
         return (
           <div>
               {this._createCardsUI()}
@@ -85,10 +58,7 @@ class GenreCards extends Component {
        )
   }
 
-
-
 }
-
 
 // Export the module back to the route
 export default GenreCards;

@@ -15,8 +15,8 @@ const MovieAPI = {
     return axios.get("https://api.themoviedb.org/3/genre/movie/list?api_key=f619c4487dbb3c827a31c662be9b1044&language=en-US");
   },
 
-  movieSearchByGenreId: function(genreId, callback) {
-    mdb.genreMovies({id: genreId}, (err, res) => {
+  movieSearchByGenreId: function(genreID, callback) {
+    mdb.genreMovies({id: genreID}, (err, res) => {
       callback(res);
     });
   },
