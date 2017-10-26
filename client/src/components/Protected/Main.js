@@ -4,7 +4,6 @@ import {Button, Row, Col} from 'react-materialize';
 import GenreButtonContainer from '../../components/GenreButton';
 import GenreCards from '../../components/Cards/GenreCards';
 import './Main.css';
-import CardExampleExpandable from '../../components/Cards/Cards';
 
 class Dashboard extends Component {
     render() {
