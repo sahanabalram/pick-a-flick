@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row, Col} from 'react-materialize';
+import {Row, Col,Button} from 'react-materialize';
 import './Landing.css';
 class LandingContainer extends Component {
     render() {
@@ -7,8 +7,9 @@ class LandingContainer extends Component {
             <div id="welcome" className="valign-wrapper">
                 <Row>
                 <Col s={12}>
-                    <h2 className='left-align'>Can't decide what to watch?</h2>
+                    <h2 className='left-align'>Can't decide what to watch</h2>
                     <h4>Let us Pick-A-Flick for you!</h4>
+                    <Button  id='main-register'waves='light' className='orange'>Register</Button>
                 </Col>
                 </Row>
             </div>
