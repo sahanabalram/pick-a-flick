@@ -8,6 +8,7 @@ import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
 import {logout} from './helpers/auth';
 import {firebaseAuth} from './config/constants';
+import AboutContainer from './components/About';
 
 function PrivateRoute({
   component: Component,
@@ -103,7 +104,7 @@ export default class App extends Component {
               </ul>
 
             </Navbar>
-
+                <AboutContainer />
             <div className="container">
               <div className="row">
                 <Switch>
