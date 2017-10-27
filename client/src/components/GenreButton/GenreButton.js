@@ -4,6 +4,28 @@ import MovieAPI from "../../utils/MovieAPI";
 import GenreCards from '../Cards/GenreCards';
 import '../../components/Landing/Landing.css';
 import './GenreButton.css';
+import ChatBotContainer from '../ChatBot';
+
+class RenderRows extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            movies: this.props.movies || []
+        }
+    }
+    componentWillReceiveProps(newProps) {
+        this.setState({
+            movies: newProps.movies
+        });    
+    }
+    render() {
+    return (
+        this.state.movies.map( movie => (
+            <MovieCard movie={movie} />
+        ))
+    )
+    }
+}
 
 class GenreButtonContainer extends Component {
 
@@ -11,7 +33,6 @@ class GenreButtonContainer extends Component {
         value : "",
         movies: []
     };
-
 
     getMoviesbyGenre = (newGenre) => {
       MovieAPI.movieSearchByGenreId(newGenre, (data)=>{
@@ -33,12 +54,13 @@ class GenreButtonContainer extends Component {
       }
 
     render() {
-        // let genreID = this.state.value;
-        // console.log("GENRE BUTTON====", newGenre)
         return (
             <div className='container'>
                 <Row>
-                    <Col s={6}>
+                    <Col s={12} m={4} l={4}>
+                    <ChatBotContainer/>
+                    </Col>
+                    <Col s={12} m={8} l={8}>
                         <h1>Movie Suggestion</h1>
                         <ul>
                         <li><Button onClick={this.handleEvent} value="28" waves='light'>Action</Button></li>
@@ -50,7 +72,9 @@ class GenreButtonContainer extends Component {
                         </ul>
                     </Col>
                 </Row>
-                <GenreCards movies={this.state.movies}></GenreCards>
+                <Row>
+                <GenreCards movies={this.state.movies}/>
+                </Row>
             </div>
         )
     }
