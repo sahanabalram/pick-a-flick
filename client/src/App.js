@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter, Link, Redirect, Switch} from 'react-router-dom';
-import {Navbar, NavItem, Icon} from 'react-materialize';
+import {Navbar, NavItem, Icon,Row,Col,Preloader} from 'react-materialize';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Protected';
@@ -67,29 +67,29 @@ export default class App extends Component {
 
   render() {
     return this.state.loading === true
-      ? <h1>Loading</h1>
+      ? <Row>
+      <Col s={4}>
+        <Preloader size='big'/>
+      </Col>
+      <Col s={4}>
+        <Preloader flashing/>
+      </Col>
+      <Col s={4}>
+        <Preloader size='small'/>
+      </Col>
+    </Row>
       : (
         <BrowserRouter>
           <div>
 
             <Navbar brand='Pick-A-Flick' right>
               <ul id='navbar-main'>
-                
                   <Link to='/login'>
                     Login
                   </Link>
-                
-                
-                  <Link to='/register'>
-                    Register
-                  </Link>
-                
-                
                   <Link to='/main'>
                     Dashboard
                   </Link>
-                
-                
                   <Link to='/'>
             {this.state.authed
               ? <button
