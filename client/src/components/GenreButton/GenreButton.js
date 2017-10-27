@@ -19,6 +19,7 @@ class GenreButtonContainer extends Component {
         if (data.results && data.results.length > 0 ) {
           this.setState({movies: data.results});
         }
+
       });
     }
 
@@ -39,18 +40,18 @@ class GenreButtonContainer extends Component {
             <div className='container'>
                 <Row>
                     <Col s={6}>
-                        <h1>Movie Suggestion</h1>
-                        <ul>
-                        <li><Button onClick={this.handleEvent} value="28" waves='light'>Action</Button></li>
-                        <li><Button onClick={this.handleEvent} value="18" waves='light'>Drama</Button></li>
-                        <li><Button onClick={this.handleEvent} value="35" waves='light'>Comedy</Button></li>
-                        <li><Button onClick={this.handleEvent} value="10751" waves='light'>Family</Button></li>
-                        <li><Button onClick={this.handleEvent} value="878" waves='light'>Science Fiction</Button></li>
-                        <li><Button onClick={this.handleEvent} value="9648" waves='light'>Mystery</Button></li>
-                        </ul>
+                      <h1 id="movieHeader">Movie Genres</h1>
+                      <Col s={6} id="genreButton">  <Button onClick={this.handleEvent} value="28" waves='light'>Action</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="18" waves='light'>Drama</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="35" waves='light'>Comedy</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="10751" waves='light'>Family</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="878" waves='light'>Science Fiction</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="9648" waves='light'>Mystery</Button></Col>
                     </Col>
                 </Row>
-                <GenreCards movies={this.state.movies}></GenreCards>
+                <Row>
+                  <GenreCards movies={this.state.movies}></GenreCards>
+                </Row>
             </div>
         )
     }
