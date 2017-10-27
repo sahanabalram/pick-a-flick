@@ -6,27 +6,6 @@ import '../../components/Landing/Landing.css';
 import './GenreButton.css';
 import ChatBotContainer from '../ChatBot';
 
-class RenderRows extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            movies: this.props.movies || []
-        }
-    }
-    componentWillReceiveProps(newProps) {
-        this.setState({
-            movies: newProps.movies
-        });    
-    }
-    render() {
-    return (
-        this.state.movies.map( movie => (
-            <MovieCard movie={movie} />
-        ))
-    )
-    }
-}
-
 class GenreButtonContainer extends Component {
 
     state = {
