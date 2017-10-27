@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { login, resetPassword } from '../../helpers/auth'
+import './Login.css';
 
 function setErrorMsg(error) {
   return {
@@ -42,7 +43,7 @@ export default class Login extends Component {
               &nbsp;{this.state.loginMessage} <a href="#" onClick={this.resetPassword} className="alert-link">Forgot Password?</a>
             </div>
           }
-          <button type="submit" className="btn btn-primary">Login</button>
+          <button type="submit" className="btn btn-primary orange">Login</button>
         </form>
       </div>
     )

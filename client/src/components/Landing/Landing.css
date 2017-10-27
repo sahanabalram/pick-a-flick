@@ -3,5 +3,9 @@ body {
   background-size: cover;
 }
 #welcome {
-  margin-top: 25px;
+  margin-top: 75px;
+}
+
+h2, h4 {
+  text-shadow: 2px 2px 5px white;
 }
