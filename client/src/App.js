@@ -123,7 +123,6 @@ export default class App extends Component {
               
               </div>
             </div>
-            <Footer/>
           </div>
         </BrowserRouter>
       );
