@@ -7,7 +7,6 @@ import MovieAPI from "../../utils/MovieAPI";
 import {Col, Card, CardTitle} from 'react-materialize';
 
 // Results Component Declaration
-// import "./GenreCards.css"
 class GenreCards extends Component {
 
   // Here we will save states for the contents we save
@@ -98,7 +97,7 @@ class GenreCards extends Component {
             <b>Rating:
             </b>{movie.vote_average}/10 ({movie.vote_count}
             votes ){movie.overview}</small></p>}>
-            <p><a href={"http://image.tmdb.org/t/p/w500" + movie.poster_path}>This is a Link</a></p>
+            <p><a href={"http://image.tmdb.org/t/p/w500" + movie.poster_path}>Link</a></p>
             </Card>
           </Col>
         ))
