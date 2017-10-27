@@ -33,26 +33,23 @@ class GenreButtonContainer extends Component {
       }
 
     render() {
+        // let genreID = this.state.value;
+        // console.log("GENRE BUTTON====", newGenre)
         return (
             <div className='container'>
                 <Row>
-                    <Col s={12} m={4} l={4}>
-                    <ChatBotContainer/>
-                    </Col>
-                    <Col s={12} m={8} l={8}>
-                        <h1>Movie Suggestion</h1>
-                        <ul>
-                        <li><Button onClick={this.handleEvent} value="28" waves='light'>Action</Button></li>
-                        <li><Button onClick={this.handleEvent} value="18" waves='light'>Drama</Button></li>
-                        <li><Button onClick={this.handleEvent} value="35" waves='light'>Comedy</Button></li>
-                        <li><Button onClick={this.handleEvent} value="10751" waves='light'>Family</Button></li>
-                        <li><Button onClick={this.handleEvent} value="878" waves='light'>Science Fiction</Button></li>
-                        <li><Button onClick={this.handleEvent} value="9648" waves='light'>Mystery</Button></li>
-                        </ul>
+                    <Col s={6}>
+                      <h1 id="movieHeader">Movie Genres</h1>
+                      <Col s={6} id="genreButton">  <Button onClick={this.handleEvent} value="28" waves='light'>Action</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="18" waves='light'>Drama</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="35" waves='light'>Comedy</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="10751" waves='light'>Family</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="878" waves='light'>Science Fiction</Button></Col>
+                      <Col s={6} id="genreButton"><Button onClick={this.handleEvent} value="9648" waves='light'>Mystery</Button></Col>
                     </Col>
                 </Row>
                 <Row>
-                <GenreCards movies={this.state.movies}/>
+                  <GenreCards movies={this.state.movies}></GenreCards>
                 </Row>
             </div>
         )

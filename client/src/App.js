@@ -6,11 +6,12 @@ import Register from './components/Register';
 import Dashboard from './components/Protected';
 import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
-import {logout} from './helpers/auth';
+import {logout} from './utils/helpers/auth';
 import {firebaseAuth} from './config/constants';
 import './App.css';
 import Footer from './components/Footer';
 import GenreButtonContainer from './components/GenreButton';
+
 
 function PrivateRoute({
   component: Component,

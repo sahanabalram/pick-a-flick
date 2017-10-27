@@ -7,42 +7,17 @@ import MovieAPI from "../../utils/MovieAPI";
 import {Col} from 'react-materialize';
 // Results Component Declaration
 class GenreCards extends Component {
+
   // Here we will save states for the contents we save
   state = {
-    movies: [],
-    movie: {},
     show: false
   }
 
-  getMoviesbyGenre = () => {
-    MovieAPI
-      .listOfGenreIds()
-      .then((res) => {
-        console.log(res.data.genres);
-      });
-
-    MovieAPI.movieSearchByGenreId(35, (data) => {
-      console.log(data);
-      if (data.results && data.results.length > 0) {
-        this.setState({movies: data.results});
-      }
-    });
-
-  }
-
-  componentDidMount() {
-    this.getMoviesbyGenre()
-  }
 
   _createCardsUI() {
 
-    // Declare Movie Props Return
-    var movies = this.state.movies || {}
-
-    // ??? Duplicate functionality of above? let movies =
-    // this.state.movies.map((value, index, array) => {   return (         <li
-    // onClick={this.onClick.bind(this, value)} key={value.id} href={"#/movies/" +
-    // value.id}>{value.title}</li>   ) });
+  // Declare Movie Props Return
+  var movies = this.props.movies || [];
 
     return movies.map(movie => (
       <Col l={4} m={4} s={12}>
@@ -79,15 +54,15 @@ class GenreCards extends Component {
           </div>
         </div>
       </Col>
-    ))
-  }
+        ))
+    }
 
-  render() {
-    return (
-      <div>
-        {this._createCardsUI()}
-      </div>
-    )
+  render () {
+        return (
+          <div>
+              {this._createCardsUI()}
+          </div>
+       )
   }
 
 }

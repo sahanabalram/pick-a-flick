@@ -1,10 +1,29 @@
+
 button.btn.waves-effect.waves-light {
     margin-left: 10px;
     background: #ffab40;
     color: black;
+    box-shadow: 2px 2px 4px #000000;
+    font-size: 18px;
+}
+
+#movieHeader{
+  padding-top: 18px;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
 }
 
 #chatterbot {
     margin-top: 60px;
     margin-right: 100px;
+}
+
+#genreButton {
+  padding-bottom: 50px;
 }
