@@ -9,6 +9,7 @@ import LandingContainer from './components/Landing';
 import {logout} from './helpers/auth';
 import {firebaseAuth} from './config/constants';
 import './App.css';
+import Footer from './components/Footer';
 
 function PrivateRoute({
   component: Component,
@@ -117,8 +118,10 @@ export default class App extends Component {
                     component={Dashboard}/>
                   <Route render={() => <h3>No Match</h3>}/>
                 </Switch>
+              
               </div>
             </div>
+            <Footer />
           </div>
         </BrowserRouter>
       );
