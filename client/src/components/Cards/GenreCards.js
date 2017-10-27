@@ -80,15 +80,10 @@ class GenreCards extends Component {
   }
 
   _createCardsUIv2() {
-    
+
         // Declare Movie Props Return
-        var movies = this.state.movies || {}
-    
-        // ??? Duplicate functionality of above? let movies =
-        // this.state.movies.map((value, index, array) => {   return (         <li
-        // onClick={this.onClick.bind(this, value)} key={value.id} href={"#/movies/" +
-        // value.id}>{value.title}</li>   ) });
-    
+        var movies = this.props.movies || {}
+
         return movies.map(movie => (
           <Col l={4} m={4} s={12}>
             <Card header={<CardTitle reveal image={"https://image.tmdb.org/t/p/w500" + movie.poster_path} waves='light'/>}
