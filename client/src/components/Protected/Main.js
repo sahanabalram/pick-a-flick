@@ -22,21 +22,15 @@ class Dashboard extends Component {
                 </Row>
 
                 <div>
-                    
-                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
-                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
-                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
-                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
-                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
-                    <img className='movie-image' src='http://via.placeholder.com/350x150'/>
-                   
+            
+
                 </div>
 
             </div>
 
         )
     }
-    
+
 }
 
 export default Dashboard;
