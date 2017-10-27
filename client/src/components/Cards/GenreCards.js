@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 // Include our helpers for API calls
 import MovieAPI from "../../utils/MovieAPI";
 // import MovieModal from "./MovieModal.js"
-import {Col, Card, CardTitle} from 'react-materialize';
+import {Col, Card, CardTitle,Icon} from 'react-materialize';
 
 // Results Component Declaration
 class GenreCards extends Component {
