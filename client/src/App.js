@@ -8,6 +8,9 @@ import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
 import {logout} from './utils/helpers/auth';
 import {firebaseAuth} from './config/constants';
+import './App.css';
+import Footer from './components/Footer';
+import GenreButtonContainer from './components/GenreButton';
 
 
 function PrivateRoute({
@@ -71,22 +74,22 @@ export default class App extends Component {
 
             <Navbar brand='Pick-A-Flick' right>
               <ul id='navbar-main'>
-                <li>
+                
                   <Link to='/login'>
-                    <NavItem>Login</NavItem>
+                    Login
                   </Link>
-                </li>
-                <li>
+                
+                
                   <Link to='/register'>
-                    <NavItem>Register</NavItem>
+                    Register
                   </Link>
-                </li>
-                <li>
+                
+                
                   <Link to='/main'>
-                    <NavItem>Dashboard</NavItem>
+                    Dashboard
                   </Link>
-                </li>
-                <li>
+                
+                
                   <Link to='/'>
             {this.state.authed
               ? <button
@@ -100,7 +103,7 @@ export default class App extends Component {
                   className="navbar-brand">Logout</button>
               : <span></span>}
               </Link>
-                  </li>
+                  
               </ul>
 
             </Navbar>
@@ -117,6 +120,7 @@ export default class App extends Component {
                     component={Dashboard}/>
                   <Route render={() => <h3>No Match</h3>}/>
                 </Switch>
+              
               </div>
             </div>
           </div>

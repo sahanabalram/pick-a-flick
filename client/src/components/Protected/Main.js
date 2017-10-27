@@ -12,11 +12,7 @@ class Dashboard extends Component {
                 <Row>
                     <Col s={6}>
                     <ChatBotContainer/>
-                        {/* <Button className='movie-button' waves='light' className='orange'>Drama</Button>
-                        <Button className='movie-button' waves='light' className='orange'>Action</Button>
-                        <Button className='movie-button' waves='light' className='orange'>Science Fiction</Button>
-                        <Button className='movie-button' waves='light' className='orange'>Family</Button>
-                        <Button className='movie-button' waves='light' className='orange'>Romantic</Button> */}
+                       
                     </Col>
                     <GenreButtonContainer />
                 </Row>

@@ -4,6 +4,7 @@ import MovieAPI from "../../utils/MovieAPI";
 import GenreCards from '../Cards/GenreCards';
 import '../../components/Landing/Landing.css';
 import './GenreButton.css';
+import ChatBotContainer from '../ChatBot';
 
 class GenreButtonContainer extends Component {
 
@@ -12,14 +13,12 @@ class GenreButtonContainer extends Component {
         movies: []
     };
 
-
     getMoviesbyGenre = (newGenre) => {
       MovieAPI.movieSearchByGenreId(newGenre, (data)=>{
         console.log(data);
         if (data.results && data.results.length > 0 ) {
           this.setState({movies: data.results});
         }
-
       });
     }
 
