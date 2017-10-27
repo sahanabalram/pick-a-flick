@@ -10,6 +10,7 @@ import {logout} from './helpers/auth';
 import {firebaseAuth} from './config/constants';
 import './App.css';
 import Footer from './components/Footer';
+import GenreButtonContainer from './components/GenreButton';
 
 function PrivateRoute({
   component: Component,
@@ -121,7 +122,6 @@ export default class App extends Component {
               
               </div>
             </div>
-            <Footer />
           </div>
         </BrowserRouter>
       );

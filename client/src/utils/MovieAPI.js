@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 // Include the Axios library for HTTP requests
 import axios from "axios";
-const mdb = require("moviedb")('f619c4487dbb3c827a31c662be9b1044');
+const mdb = require("moviedb");//('f619c4487dbb3c827a31c662be9b1044');
 
 
 // NYT API Key (Replace with your own API Key)

@@ -51,12 +51,12 @@ class GenreCards extends Component {
             className='small'
             aria-labelledby="movie-modal-title">
 
-            <div class="card-header">
+            <div className="card-header">
               <h3 id="movie-modal-title">{movie.title}</h3>
               <small><b>Rating: </b>{movie.vote_average}/10 ({movie.vote_count} votes)</small>
               <p><b>Release Date:</b> {movie.release_date}</p>
             </div>
-            <div class="card-body">
+            <div className="card-body">
               <div className="center-block">
                 <a href={"http://image.tmdb.org/t/p/w500"+ movie.poster_path}
                    data-lightbox={movie.title + " poster"}
