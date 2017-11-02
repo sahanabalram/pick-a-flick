@@ -24,6 +24,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 
 nav ul a {
   float: left;

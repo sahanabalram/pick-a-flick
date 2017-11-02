@@ -1,9 +1,8 @@
-footer.page-footer.example {
+footer.page-footer {
     background: #2c313e;
     flex: 1 0 auto;
     margin-bottom: 0px;
     margin-top: 40px;
-    position: absolute;
     bottom: 0;
     width: 100%;
 }

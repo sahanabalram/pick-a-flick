@@ -8,8 +8,9 @@ import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
 import {logout} from './utils/helpers/auth';
 import {firebaseAuth} from './config/constants';
-import './App.css';
+import AboutContainer from './components/About';
 import Footer from './components/Footer';
+import './App.css';
 import GenreButtonContainer from './components/GenreButton';
 
 
@@ -84,11 +85,11 @@ export default class App extends Component {
 
             <Navbar brand='Pick-A-Flick' right>
               <ul id='navbar-main'>
+              <Link to='/main'>
+                    Dashboard
+                  </Link>
                   <Link to='/login'>
                     Login
-                  </Link>
-                  <Link to='/main'>
-                    Dashboard
                   </Link>
                   <Link to='/'>
             {this.state.authed
@@ -107,11 +108,11 @@ export default class App extends Component {
               </ul>
 
             </Navbar>
-
             <div className="container">
               <div className="row">
                 <Switch>
                   <Route path='/' exact component={LandingContainer}/>
+                  <Route path='/' exact component={AboutContainer}/>
                   <PublicRoute authed={this.state.authed} path='/login' component={Login}/>
                   <PublicRoute authed={this.state.authed} path='/register' component={Register}/>
                   <PrivateRoute
@@ -123,6 +124,7 @@ export default class App extends Component {
               
               </div>
             </div>
+            <Footer />
           </div>
         </BrowserRouter>
       );
