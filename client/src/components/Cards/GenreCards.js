@@ -86,9 +86,9 @@ class GenreCards extends Component {
         var movies = this.props.movies || {}
 
 
-        return movies.map(movie => (
+        return movies.slice(0,6).map(movie => (
           <Col l={4} m={4} s={12}>
-            <Card className="movieCard" header={<CardTitle reveal image={"https://image.tmdb.org/t/p/w500" + movie.poster_path} waves='light'/>}
+            <Card className="movieCard" header={<CardTitle id="reveal" reveal image={"https://image.tmdb.org/t/p/w500" + movie.poster_path} waves='light'/>}
           title={movie.title}
           reveal={<p><small>
             <b>Rating:
