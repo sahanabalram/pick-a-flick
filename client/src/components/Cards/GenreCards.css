@@ -1,0 +1,16 @@
+/* .card-content {
+    height: 30px;
+} */
+
+.movieCard {
+    min-height: 450px;
+    line-height: 26px;
+}
+
+.movieCard img {
+    height: 280px;
+}
+
+.card-title {
+    line-height: 24px !important;
+}
