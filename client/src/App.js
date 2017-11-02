@@ -85,11 +85,11 @@ export default class App extends Component {
 
             <Navbar brand='Pick-A-Flick' right>
               <ul id='navbar-main'>
+              <Link to='/main'>
+                    Dashboard
+                  </Link>
                   <Link to='/login'>
                     Login
-                  </Link>
-                  <Link to='/main'>
-                    Dashboard
                   </Link>
                   <Link to='/'>
             {this.state.authed
