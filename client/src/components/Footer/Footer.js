@@ -14,12 +14,21 @@ class FooterContainer extends Component {
 							<ul>
 								<h5 className="white-text">Connect with Us!</h5>
 								<p>
+<<<<<<< HEAD
 								<li><a class="github-button" href="https://www.github.com/annacrespo" aria-label="Follow @annacrespo on GitHub">Follow @annacrespo</a></li>
 								<li><a class="github-button" href="https://www.github.com/fneim" aria-label="Follow @fneim on GitHub">Follow @fneim</a></li>
 								<li><a class="github-button" href="https://www.github.com/jeanellesebastian" aria-label="Follow @jeanellesebastian on GitHub">Follow @jeanellesebastian</a></li>
 								<li><a class="github-button" href="https://www.github.com/jheal006" aria-label="Follow @jheal006 on GitHub">Follow @jheal006</a></li>
 								<li><a class="github-button" href="https://www.github.com/klaytonolavi" aria-label="Follow @klaytonolavi on GitHub">Follow @klaytonolavi</a></li>
 								<li><a class="github-button" href="https://www.github.com/sahanabalram" aria-label="Follow @sahanabalram on GitHub">Follow @sahanabalram</a></li>
+=======
+								<li><a className="github-button" href="https://www.github.com/annacrespo" aria-label="Follow @annacrespo on GitHub">Follow @annacrespo</a></li>
+								<li><a className="github-button" href="https://www.github.com/fneim" aria-label="Follow @fneim on GitHub">Follow @fneim</a></li>
+								<li><a className="github-button" href="https://www.github.com/jeanellesebastian" aria-label="Follow @jeanellesebastian on GitHub">Follow @jeanellesebastian</a></li>
+								<li><a className="github-button" href="https://www.github.com/jheal006" aria-label="Follow @jheal006 on GitHub">Follow @jheal006</a></li>
+								<li><a className="github-button" href="https://www.github.com/klaytonolavi" aria-label="Follow @klaytonolavi on GitHub">Follow @klaytonolavi</a></li>
+								<li><a className="github-button" href="https://www.github.com/sahanabalram" aria-label="Follow @sahanabalram on GitHub">Follow @sahanabalram</a></li>
+>>>>>>> 7cc7afd7404bee406012a5ef8a309fcfc6dd125c
 								</p>
 							</ul>
 						}

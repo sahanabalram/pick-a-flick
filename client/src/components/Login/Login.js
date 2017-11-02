@@ -27,11 +27,9 @@ export default class Login extends Component {
         <h1> Login </h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label>Email</label>
             <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
           </div>
           <div className="form-group">
-            <label>Password</label>
             <input type="password" className="form-control" placeholder="Password" ref={(pw) => this.pw = pw} />
           </div>
           {
@@ -42,7 +40,7 @@ export default class Login extends Component {
               &nbsp;{this.state.loginMessage} <a href="#" onClick={this.resetPassword} className="alert-link">Forgot Password?</a>
             </div>
           }
-          <button type="submit" className="btn btn-primary">Login</button>
+          <button type="submit" className="btn btn-primary orange">Login</button>
         </form>
       </div>
     )

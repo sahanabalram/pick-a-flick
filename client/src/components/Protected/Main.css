@@ -1,0 +1,9 @@
+.movie-image {
+    display: inline;
+    margin-right: 10px;
+}
+
+button.btn.waves-effect.waves-light.orange {
+    margin-right: 5px;
+    margin-top: 10px;
+}

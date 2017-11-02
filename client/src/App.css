@@ -24,9 +24,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+<<<<<<< HEAD
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
+=======
+
+nav ul a {
+  float: left;
+}
+>>>>>>> 7cc7afd7404bee406012a5ef8a309fcfc6dd125c

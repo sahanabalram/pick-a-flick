@@ -1,15 +1,22 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter, Link, Redirect, Switch} from 'react-router-dom';
-import {Navbar, NavItem, Icon} from 'react-materialize';
+import {Navbar, NavItem, Icon,Row,Col,Preloader} from 'react-materialize';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Protected';
 import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
-import {logout} from './helpers/auth';
+import {logout} from './utils/helpers/auth';
 import {firebaseAuth} from './config/constants';
+<<<<<<< HEAD
 import AboutContainer from './components/About';
 import Footer from './components/Footer';
+=======
+import './App.css';
+import Footer from './components/Footer';
+import GenreButtonContainer from './components/GenreButton';
+
+>>>>>>> 7cc7afd7404bee406012a5ef8a309fcfc6dd125c
 
 function PrivateRoute({
   component: Component,
@@ -65,29 +72,29 @@ export default class App extends Component {
 
   render() {
     return this.state.loading === true
-      ? <h1>Loading</h1>
+      ? <Row>
+      <Col s={4}>
+        <Preloader size='big'/>
+      </Col>
+      <Col s={4}>
+        <Preloader flashing/>
+      </Col>
+      <Col s={4}>
+        <Preloader size='small'/>
+      </Col>
+    </Row>
       : (
         <BrowserRouter>
           <div>
 
             <Navbar brand='Pick-A-Flick' right>
               <ul id='navbar-main'>
-                <li>
                   <Link to='/login'>
-                    <NavItem>Login</NavItem>
+                    Login
                   </Link>
-                </li>
-                <li>
-                  <Link to='/register'>
-                    <NavItem>Register</NavItem>
-                  </Link>
-                </li>
-                <li>
                   <Link to='/main'>
-                    <NavItem>Dashboard</NavItem>
+                    Dashboard
                   </Link>
-                </li>
-                <li>
                   <Link to='/'>
             {this.state.authed
               ? <button
@@ -101,7 +108,7 @@ export default class App extends Component {
                   className="navbar-brand">Logout</button>
               : <span></span>}
               </Link>
-                  </li>
+                  
               </ul>
 
             </Navbar>
@@ -118,6 +125,7 @@ export default class App extends Component {
                     component={Dashboard}/>
                   <Route render={() => <h3>No Match</h3>}/>
                 </Switch>
+              
               </div>
             </div>
             <Footer />
