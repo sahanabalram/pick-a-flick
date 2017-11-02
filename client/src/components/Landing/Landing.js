@@ -11,6 +11,8 @@ class LandingContainer extends Component {
                     <h2 className='left-align'>Can't decide what to watch</h2>
                     <h4>Let us Pick-A-Flick for you!</h4>
                     <Link to='/register'><p><Button  id='main-register'waves='light' className='orange'>Register</Button></p></Link>
+                    <Link to='/login'><p><Button  id='main-register'waves='light' className='orange'>LogIn</Button></p></Link>
+
                 </Col>
                 </Row>
             </div>

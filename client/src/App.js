@@ -85,9 +85,9 @@ export default class App extends Component {
 
             <Navbar brand='Pick-A-Flick' right>
               <ul id='navbar-main'>
-                  <Link to='/login'>
+                  {/* <Link to='/login'>
                     Login
-                  </Link>
+                  </Link> */}
                   <Link to='/main'>
                     Dashboard
                   </Link>
