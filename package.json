@@ -24,13 +24,9 @@
     "firebase": "^4.6.0",
     "morgan": "^1.9.0",
     "moviedb": "^0.2.10",
-<<<<<<< HEAD
-    "react-router-dom": "^4.2.2"
-=======
     "mysql": "^2.15.0",
     "mysql2": "^1.4.2",
     "react-router-dom": "^4.2.2",
     "sequelize": "^4.18.0"
->>>>>>> 7cc7afd7404bee406012a5ef8a309fcfc6dd125c
   }
 }

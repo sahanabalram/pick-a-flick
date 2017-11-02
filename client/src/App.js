@@ -8,15 +8,11 @@ import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
 import {logout} from './utils/helpers/auth';
 import {firebaseAuth} from './config/constants';
-<<<<<<< HEAD
 import AboutContainer from './components/About';
 import Footer from './components/Footer';
-=======
 import './App.css';
-import Footer from './components/Footer';
 import GenreButtonContainer from './components/GenreButton';
 
->>>>>>> 7cc7afd7404bee406012a5ef8a309fcfc6dd125c
 
 function PrivateRoute({
   component: Component,
