@@ -5,10 +5,7 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.17.0",
-<<<<<<< HEAD
     "firebase": "^4.6.0",
-=======
->>>>>>> 1551bc7... footer fixed
     "material-ui": "^0.19.4",
     "moviedb": "^0.2.10",
     "react": "^16.0.0",
