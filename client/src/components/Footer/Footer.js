@@ -11,7 +11,7 @@ class FooterContainer extends Component {
 					<Footer className="center-align" copyrights="© 2017 Flick a Pick"
 
 						links={
-							<ul>
+							<ul className="white-text">
 								<h5 className="white-text">Connect with Us!</h5>
 								<p>
 								<li><a className="github-button" href="https://www.github.com/annacrespo" aria-label="Follow @annacrespo on GitHub">Follow @annacrespo</a></li>
@@ -23,7 +23,6 @@ class FooterContainer extends Component {
 								</p>
 							</ul>
 						}
-						className='example'
 					>
 						
 						<h5 className="white-text">About Us</h5>

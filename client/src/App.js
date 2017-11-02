@@ -8,8 +8,9 @@ import NavbarContainer from './components/Navbar';
 import LandingContainer from './components/Landing';
 import {logout} from './utils/helpers/auth';
 import {firebaseAuth} from './config/constants';
-import './App.css';
+
 import Footer from './components/Footer';
+import './App.css';
 import GenreButtonContainer from './components/GenreButton';
 
 
