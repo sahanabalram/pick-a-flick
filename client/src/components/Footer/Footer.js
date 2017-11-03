@@ -8,7 +8,7 @@ class FooterContainer extends Component {
         return (
 			<div>
 				<div className="Footer">
-					<Footer className="center-align" copyrights="© 2017 Flick a Pick"
+					<Footer className="center-align" copyrights="© 2017 Pick-A-Flick"
 
 						links={
 							<ul className="white-text">
